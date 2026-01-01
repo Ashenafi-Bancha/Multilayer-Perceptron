@@ -1,8 +1,16 @@
+"""
+Group Members:
+- Ashenafi Bancha-----UGR/1796/15
+- Elham Jemal---------UGR/1757/14
+- Feruza Hassen-------UGR/6423/15
+- Ihsan Jemal---------UGR/9433/15
+"""
+
+
+
 import numpy as np
 
-# -------------------------------
 # Activation function and derivative
-# -------------------------------
 
 def sigmoid(z):
     """
@@ -17,7 +25,6 @@ def sigmoid_derivative(a):
     Assumes 'a' is already sigmoid(z)
     """
     return a * (1 - a)
-
 
 # XOR Dataset
 
@@ -35,23 +42,18 @@ y = np.array([
     [0]
 ])
 
-# -------------------------------
+
 # Set random seed for reproducibility
-# -------------------------------
 
 np.random.seed(42)
 
-# -------------------------------
 # Network Architecture
-# -------------------------------
 
 input_layer_size = 2
 hidden_layer_size = 2
 output_layer_size = 1
 
-# -------------------------------
 # Weight and Bias Initialization
-# -------------------------------
 
 weights_input_hidden = np.random.rand(input_layer_size, hidden_layer_size)
 bias_hidden = np.random.rand(1, hidden_layer_size)
@@ -59,16 +61,12 @@ bias_hidden = np.random.rand(1, hidden_layer_size)
 weights_hidden_output = np.random.rand(hidden_layer_size, output_layer_size)
 bias_output = np.random.rand(1, output_layer_size)
 
-# -------------------------------
 # Training Parameters
-# -------------------------------
 
 learning_rate = 0.1
 epochs = 10000
 
-# -------------------------------
 # Training Loop
-# -------------------------------
 
 for epoch in range(epochs):
 
@@ -100,9 +98,7 @@ for epoch in range(epochs):
     if epoch % 2000 == 0:
         print(f"Epoch {epoch}, Loss: {loss:.6f}")
 
-# -------------------------------
 # Final Predictions
-# -------------------------------
 
 print("\nFinal Predictions:")
 for i in range(len(X)):
