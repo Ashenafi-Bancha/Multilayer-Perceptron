@@ -46,7 +46,7 @@ mlp/
 
 ---
 
-## ⚙️ Installation and Setup
+##  Installation and Setup
 
 ### 1️. Clone the Repository
 ```bash
